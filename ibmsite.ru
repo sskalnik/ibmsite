@@ -33,6 +33,3 @@ class IBMsite
 end
 
 Rack::Handler::Thin.run(IBMsite.new, Host: '0.0.0.0', Port: 8888)
-
-__END__
-run ->(env) { [200, {"Content-Type" => "text/html"}, ["#{Time.now - IO.read('/proc/uptime').split[0].to_f}"]] }
