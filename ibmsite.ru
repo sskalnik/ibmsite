@@ -41,9 +41,9 @@ class IBMsite
 
     case req.path_info
     when '/', '/service'
-      [200, {"Content-Type" => "text/html"}, [resp_json(:start_time)]]
+      [200, {"Content-Type" => "application/json"}, [resp_json(:start_time)]]
     when '/system'
-      [200, {"Content-Type" => "text/html"}, [resp_json(:system)]]
+      [200, {"Content-Type" => "application/json"}, [resp_json(:system)]]
     else
       [404, {"Content-Type" => "text/html"}, ["These are not the droids you're looking for..."]]
     end
