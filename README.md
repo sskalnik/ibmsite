@@ -5,13 +5,18 @@ My example site is http://ibmsite.homewor.cc/
 
 Note that the ELB IPs (probably the highest-ranked visitors at any time) are included, and regularly increment since they are performing health checks.
 
-## Prerequisites:
-### dev tools installed (for compiling EventMachine, possibly others)
+## How to deploy to Elastic Beanstalk
+[See eb.md](eb.md)
+
+## How to deploy elsewhere
+
+### Prerequisites:
+#### dev tools installed (for compiling EventMachine, possibly others)
 If running on AL or another RHEL-based platform:
 ```bash
 sudo yum group install "Development Tools"
 ```
-### Ruby
+#### Ruby
 RVM is ideal
 ```bash
 # Install RVM
@@ -20,7 +25,7 @@ RVM is ideal
 rvm use --default ruby-2.5.1
 ``` 
 
-## Install:
+### Install:
 ```bash
 $ cd ibmsite && bundle install
 ```
@@ -36,7 +41,7 @@ Bundle complete! 2 Gemfile dependencies, 5 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 ```
 
-## Run:
+### Run:
 ```bash
 $ bundle exec rackup -E $TEST_DEVELOPMENT_DEPLOY
 ```
@@ -46,8 +51,8 @@ Maximum connections set to 1024
 Listening on 0.0.0.0:8080, CTRL+C to stop
 ```
 
-## Example results:
-### App uptime
+### Example results:
+#### App uptime
 ```bash
 curl $SERVER_IP:8080
 ```
@@ -55,7 +60,7 @@ curl $SERVER_IP:8080
 {"siteUpSince":"2018-10-14 03:43:46 +0200","IPs":{"123.45.67.89":9}}
 ```
 
-### Server (host) uptime
+#### Server (host) uptime
 ```bash
 curl $SERVER_IP:8080/system
 ```
