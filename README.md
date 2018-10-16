@@ -1,6 +1,10 @@
 # IBM Homework Site
 A Rack project that runs on port 8080 and returns (a) uptime and (b) buckets with the counts of visits per visitor IP address.
 
+My example site is http://ibmsite.homewor.cc/
+
+Note that the ELB IPs (probably the highest-ranked visitors at any time) are included, and regularly increment since they are performing health checks.
+
 ## Prerequisites:
 ### dev tools installed (for compiling EventMachine, possibly others)
 If running on AL or another RHEL-based platform:
