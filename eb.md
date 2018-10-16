@@ -1,4 +1,4 @@
-# Get up and running with AWs Elastic Beanstalk
+# Get up and running with AWS Elastic Beanstalk
 ## Prerequisites
 1. An AWS account in which you have full EB permissions (or higher)
 2. AWS CLI (if you aren't using the AWS web console)
