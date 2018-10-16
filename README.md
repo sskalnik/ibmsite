@@ -1,4 +1,5 @@
 # IBM Homework Site
+A Rack project that runs on port 8080 and returns (a) uptime and (b) buckets with the counts of visits per visitor IP address.
 
 ## Prerequisites:
 ### dev tools installed (for compiling EventMachine, possibly others)
@@ -38,13 +39,13 @@ $ bundle exec rackup -E $TEST_DEVELOPMENT_DEPLOY
 ```ruby
 Thin web server (v1.7.2 codename Bachmanity)
 Maximum connections set to 1024
-Listening on 0.0.0.0:8888, CTRL+C to stop
+Listening on 0.0.0.0:8080, CTRL+C to stop
 ```
 
 ## Example results:
 ### App uptime
 ```bash
-curl $SERVER_IP:8888
+curl $SERVER_IP:8080
 ```
 ```json
 {"siteUpSince":"2018-10-14 03:43:46 +0200","IPs":{"123.45.67.89":9}}
@@ -52,7 +53,7 @@ curl $SERVER_IP:8888
 
 ### Server (host) uptime
 ```bash
-curl $SERVER_IP:8888/system
+curl $SERVER_IP:8080/system
 ```
 ```json
 {"siteUpSince":"2018-01-07 00:07:14 +0100","IPs":{"123.45.167.89":4}}
