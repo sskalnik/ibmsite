@@ -1,5 +1,5 @@
 require 'rack'
-require './ibmsite'
+require_relative 'ibmsite'
 
 if ['development', 'test'].include? ENV['RACK_ENV']
   handler = Rack::Handler::Thin
