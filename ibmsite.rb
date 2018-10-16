@@ -1,6 +1,6 @@
 require 'json'
 
-class IBMsite
+class IBMSite
   def initialize
     @ip_buckets = Hash.new(0)
     @start_time = Time.now
@@ -43,7 +43,7 @@ class IBMsite
     when '/system'
       [200, {"Content-Type" => "application/json"}, [resp_json(:system)]]
     else
-      [404, {"Content-Type" => "text/html"}, ["These are not the droids you're looking for..."]]
+      [200, {"Content-Type" => "text/html"}, ["These are not the droids you're looking for..."]]
     end
   end
 end

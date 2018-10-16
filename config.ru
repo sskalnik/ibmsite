@@ -7,4 +7,4 @@ else
   port = 80
 end
 
-Rack::Handler.default.run(IBMsite.new, Host: '0.0.0.0', Port: port)
+Rack::Handler.default.run(IBMSite.new, Host: '0.0.0.0', Port: port)
