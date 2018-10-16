@@ -17,7 +17,7 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 
 ## Run:
 ```bash
-$ bundle exec rackup -E $TEST_DEV_WHATEVER
+$ bundle exec rackup -E $TEST_DEVELOPMENT_DEPLOY
 ```
 ```ruby
 Thin web server (v1.7.2 codename Bachmanity)
