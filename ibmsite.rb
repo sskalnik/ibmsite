@@ -35,7 +35,7 @@ class IBMSite
   def call(env)
     req = Rack::Request.new(env)
 
-    @ip_buckets[env['REMOTE_ADDR']] += 1
+    @ip_buckets[req.ip] += 1 unless ['/favicon.ico', '/robots.txt'].include? req.path_info
 
     case req.path_info
     when '/', '/service'
@@ -43,7 +43,7 @@ class IBMSite
     when '/system'
       [200, {"Content-Type" => "application/json"}, [resp_json(:system)]]
     else
-      [200, {"Content-Type" => "text/html"}, ["These are not the droids you're looking for..."]]
+      [404, {"Content-Type" => "text/html"}, ["These are not the droids you're looking for..."]]
     end
   end
 end
