@@ -1,7 +1,23 @@
 # IBM Homework Site
+
+## Prerequisites:
+### dev tools installed (for compiling EventMachine, possibly others)
+If running on AL or another RHEL-based platform:
+```bash
+sudo yum group install "Development Tools"
+```
+### Ruby
+RVM is ideal
+```bash
+# Install RVM
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+# Use the same Ruby I used to develop this package
+rvm use --default ruby-2.5.1
+``` 
+
 ## Install:
 ```bash
-$ bundle install
+$ cd ibmsite && bundle install
 ```
 ```ruby
 Fetching gem metadata from https://rubygems.org/..............
