@@ -7,7 +7,7 @@ if ['development', 'test'].include? ENV['RACK_ENV']
 else
   require 'rack/handler/puma'
   handler = Rack::Handler::Puma
-  port = 80
+  port = 8080
 end
 
 handler.run(IBMSite.new, Host: '0.0.0.0', Port: port)
