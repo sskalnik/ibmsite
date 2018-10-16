@@ -1,6 +1,4 @@
 require 'json'
-require 'rack'
-require 'thin'
 
 class IBMsite
   def initialize
@@ -49,5 +47,3 @@ class IBMsite
     end
   end
 end
-
-Rack::Handler::Thin.run(IBMsite.new, Host: '0.0.0.0', Port: 8888)
